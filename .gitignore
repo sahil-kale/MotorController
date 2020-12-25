@@ -60,4 +60,4 @@ dkms.conf
 *.project
 *.xml
 *.LOG
-KALE_MOTOR_CONTROLLER/History/*
+HORNET_MOTOR_CONTROLLER/History/*
