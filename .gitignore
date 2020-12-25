@@ -59,3 +59,5 @@ dkms.conf
 *.mxproject
 *.project
 *.xml
+*.LOG
+KALE_MOTOR_CONTROLLER/History/*
