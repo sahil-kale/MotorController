@@ -52,6 +52,7 @@ VP_TIM12_VS_ClockSourceITR.Mode=TriggerSource_ITR2
 Mcu.Pin0=PC0
 Mcu.Pin1=PC1
 TIM3.Channel-PWM\ Generation1\ CH1=TIM_CHANNEL_1
+GPIO.groupedBy=Group By Peripherals
 Mcu.Pin2=PA2
 Mcu.Pin3=PA3
 Mcu.Pin4=PA7
