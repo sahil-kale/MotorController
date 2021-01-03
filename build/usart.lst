@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cc46nxlD.s 			page 1
+ARM GAS  /tmp/ccdvMjAW.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -39,10 +39,10 @@ ARM GAS  /tmp/cc46nxlD.s 			page 1
    9:Core/Src/usart.c ****   * <h2><center>&copy; Copyright (c) 2021 STMicroelectronics.
   10:Core/Src/usart.c ****   * All rights reserved.</center></h2>
   11:Core/Src/usart.c ****   *
-  12:Core/Src/usart.c ****   * This software component is licensed by ST under BSD 3-Clause license,
-  13:Core/Src/usart.c ****   * the "License"; You may not use this file except in compliance with the
-  14:Core/Src/usart.c ****   * License. You may obtain a copy of the License at:
-  15:Core/Src/usart.c ****   *                        opensource.org/licenses/BSD-3-Clause
+  12:Core/Src/usart.c ****   * This software component is licensed by ST under Ultimate Liberty license
+  13:Core/Src/usart.c ****   * SLA0044, the "License"; You may not use this file except in compliance with
+  14:Core/Src/usart.c ****   * the License. You may obtain a copy of the License at:
+  15:Core/Src/usart.c ****   *                             www.st.com/SLA0044
   16:Core/Src/usart.c ****   *
   17:Core/Src/usart.c ****   ******************************************************************************
   18:Core/Src/usart.c ****   */
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cc46nxlD.s 			page 1
   28:Core/Src/usart.c **** 
   29:Core/Src/usart.c **** /* USART2 init function */
   30:Core/Src/usart.c **** 
-ARM GAS  /tmp/cc46nxlD.s 			page 2
+ARM GAS  /tmp/ccdvMjAW.s 			page 2
 
 
   31:Core/Src/usart.c **** void MX_USART2_UART_Init(void)
@@ -118,7 +118,7 @@ ARM GAS  /tmp/cc46nxlD.s 			page 1
   71              		.loc 1 42 6 view .LVU19
   72 0022 00B9     		cbnz	r0, .L4
   73              	.L1:
-ARM GAS  /tmp/cc46nxlD.s 			page 3
+ARM GAS  /tmp/ccdvMjAW.s 			page 3
 
 
   43:Core/Src/usart.c ****   {
@@ -178,7 +178,7 @@ ARM GAS  /tmp/cc46nxlD.s 			page 1
  119 000c 0693     		str	r3, [sp, #24]
  120 000e 0793     		str	r3, [sp, #28]
   53:Core/Src/usart.c ****   if(uartHandle->Instance==USART2)
-ARM GAS  /tmp/cc46nxlD.s 			page 4
+ARM GAS  /tmp/ccdvMjAW.s 			page 4
 
 
  121              		.loc 1 53 3 is_stmt 1 view .LVU27
@@ -238,7 +238,7 @@ ARM GAS  /tmp/cc46nxlD.s 			page 1
  148 0026 196C     		ldr	r1, [r3, #64]
  149 0028 41F40031 		orr	r1, r1, #131072
  150 002c 1964     		str	r1, [r3, #64]
-ARM GAS  /tmp/cc46nxlD.s 			page 5
+ARM GAS  /tmp/ccdvMjAW.s 			page 5
 
 
   59:Core/Src/usart.c **** 
@@ -298,7 +298,7 @@ ARM GAS  /tmp/cc46nxlD.s 			page 1
  188 0056 0323     		movs	r3, #3
  189 0058 0693     		str	r3, [sp, #24]
   70:Core/Src/usart.c ****     HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
-ARM GAS  /tmp/cc46nxlD.s 			page 6
+ARM GAS  /tmp/ccdvMjAW.s 			page 6
 
 
  190              		.loc 1 70 5 is_stmt 1 view .LVU51
@@ -358,7 +358,7 @@ ARM GAS  /tmp/cc46nxlD.s 			page 1
  238 0008 00D0     		beq	.L16
  239              	.LVL8:
  240              	.L13:
-ARM GAS  /tmp/cc46nxlD.s 			page 7
+ARM GAS  /tmp/ccdvMjAW.s 			page 7
 
 
   83:Core/Src/usart.c ****   {
@@ -418,7 +418,7 @@ ARM GAS  /tmp/cc46nxlD.s 			page 1
  275              		.file 6 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f446xx.h"
  276              		.file 7 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h"
  277              		.file 8 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h"
-ARM GAS  /tmp/cc46nxlD.s 			page 8
+ARM GAS  /tmp/ccdvMjAW.s 			page 8
 
 
  278              		.file 9 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h"
@@ -426,21 +426,21 @@ ARM GAS  /tmp/cc46nxlD.s 			page 1
  280              		.file 11 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h"
  281              		.file 12 "Core/Inc/usart.h"
  282              		.file 13 "Core/Inc/main.h"
-ARM GAS  /tmp/cc46nxlD.s 			page 9
+ARM GAS  /tmp/ccdvMjAW.s 			page 9
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 usart.c
-     /tmp/cc46nxlD.s:18     .text.MX_USART2_UART_Init:0000000000000000 $t
-     /tmp/cc46nxlD.s:26     .text.MX_USART2_UART_Init:0000000000000000 MX_USART2_UART_Init
-     /tmp/cc46nxlD.s:85     .text.MX_USART2_UART_Init:000000000000002c $d
+     /tmp/ccdvMjAW.s:18     .text.MX_USART2_UART_Init:0000000000000000 $t
+     /tmp/ccdvMjAW.s:26     .text.MX_USART2_UART_Init:0000000000000000 MX_USART2_UART_Init
+     /tmp/ccdvMjAW.s:85     .text.MX_USART2_UART_Init:000000000000002c $d
                             *COM*:0000000000000040 huart2
-     /tmp/cc46nxlD.s:91     .text.HAL_UART_MspInit:0000000000000000 $t
-     /tmp/cc46nxlD.s:98     .text.HAL_UART_MspInit:0000000000000000 HAL_UART_MspInit
-     /tmp/cc46nxlD.s:206    .text.HAL_UART_MspInit:0000000000000068 $d
-     /tmp/cc46nxlD.s:212    .text.HAL_UART_MspDeInit:0000000000000000 $t
-     /tmp/cc46nxlD.s:219    .text.HAL_UART_MspDeInit:0000000000000000 HAL_UART_MspDeInit
-     /tmp/cc46nxlD.s:262    .text.HAL_UART_MspDeInit:0000000000000020 $d
+     /tmp/ccdvMjAW.s:91     .text.HAL_UART_MspInit:0000000000000000 $t
+     /tmp/ccdvMjAW.s:98     .text.HAL_UART_MspInit:0000000000000000 HAL_UART_MspInit
+     /tmp/ccdvMjAW.s:206    .text.HAL_UART_MspInit:0000000000000068 $d
+     /tmp/ccdvMjAW.s:212    .text.HAL_UART_MspDeInit:0000000000000000 $t
+     /tmp/ccdvMjAW.s:219    .text.HAL_UART_MspDeInit:0000000000000000 HAL_UART_MspDeInit
+     /tmp/ccdvMjAW.s:262    .text.HAL_UART_MspDeInit:0000000000000020 $d
 
 UNDEFINED SYMBOLS
 HAL_UART_Init

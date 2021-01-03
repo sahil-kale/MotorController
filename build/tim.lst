@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccIiTvHp.s 			page 1
+ARM GAS  /tmp/ccfcDr9r.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -40,10 +40,10 @@ ARM GAS  /tmp/ccIiTvHp.s 			page 1
    9:Core/Src/tim.c ****   * <h2><center>&copy; Copyright (c) 2021 STMicroelectronics.
   10:Core/Src/tim.c ****   * All rights reserved.</center></h2>
   11:Core/Src/tim.c ****   *
-  12:Core/Src/tim.c ****   * This software component is licensed by ST under BSD 3-Clause license,
-  13:Core/Src/tim.c ****   * the "License"; You may not use this file except in compliance with the
-  14:Core/Src/tim.c ****   * License. You may obtain a copy of the License at:
-  15:Core/Src/tim.c ****   *                        opensource.org/licenses/BSD-3-Clause
+  12:Core/Src/tim.c ****   * This software component is licensed by ST under Ultimate Liberty license
+  13:Core/Src/tim.c ****   * SLA0044, the "License"; You may not use this file except in compliance with
+  14:Core/Src/tim.c ****   * the License. You may obtain a copy of the License at:
+  15:Core/Src/tim.c ****   *                             www.st.com/SLA0044
   16:Core/Src/tim.c ****   *
   17:Core/Src/tim.c ****   ******************************************************************************
   18:Core/Src/tim.c ****   */
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccIiTvHp.s 			page 1
   27:Core/Src/tim.c **** TIM_HandleTypeDef htim3;
   28:Core/Src/tim.c **** TIM_HandleTypeDef htim4;
   29:Core/Src/tim.c **** TIM_HandleTypeDef htim12;
-ARM GAS  /tmp/ccIiTvHp.s 			page 2
+ARM GAS  /tmp/ccfcDr9r.s 			page 2
 
 
   30:Core/Src/tim.c **** 
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccIiTvHp.s 			page 1
   84:Core/Src/tim.c ****   sConfigIC.ICPolarity = TIM_INPUTCHANNELPOLARITY_BOTHEDGE;
   85:Core/Src/tim.c ****   sConfigIC.ICSelection = TIM_ICSELECTION_DIRECTTI;
   86:Core/Src/tim.c ****   sConfigIC.ICPrescaler = TIM_ICPSC_DIV1;
-ARM GAS  /tmp/ccIiTvHp.s 			page 3
+ARM GAS  /tmp/ccfcDr9r.s 			page 3
 
 
   87:Core/Src/tim.c ****   sConfigIC.ICFilter = 0;
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccIiTvHp.s 			page 1
  141:Core/Src/tim.c ****   }
  142:Core/Src/tim.c ****   if (HAL_TIM_PWM_ConfigChannel(&htim4, &sConfigOC, TIM_CHANNEL_2) != HAL_OK)
  143:Core/Src/tim.c ****   {
-ARM GAS  /tmp/ccIiTvHp.s 			page 4
+ARM GAS  /tmp/ccfcDr9r.s 			page 4
 
 
  144:Core/Src/tim.c ****     Error_Handler();
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccIiTvHp.s 			page 1
  198:Core/Src/tim.c **** 
  199:Core/Src/tim.c **** void HAL_TIM_Base_MspInit(TIM_HandleTypeDef* tim_baseHandle)
  200:Core/Src/tim.c **** {
-ARM GAS  /tmp/ccIiTvHp.s 			page 5
+ARM GAS  /tmp/ccfcDr9r.s 			page 5
 
 
   30              		.loc 1 200 1 view -0
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccIiTvHp.s 			page 1
   58              		.loc 1 226 10 is_stmt 0 view .LVU8
   59 0018 224A     		ldr	r2, .L9+4
   60 001a 9342     		cmp	r3, r2
-ARM GAS  /tmp/ccIiTvHp.s 			page 6
+ARM GAS  /tmp/ccfcDr9r.s 			page 6
 
 
   61 001c 26D0     		beq	.L7
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccIiTvHp.s 			page 1
  209:Core/Src/tim.c **** 
   90              		.loc 1 209 5 view .LVU15
   91 0038 196C     		ldr	r1, [r3, #64]
-ARM GAS  /tmp/ccIiTvHp.s 			page 7
+ARM GAS  /tmp/ccfcDr9r.s 			page 7
 
 
   92 003a 01F00201 		and	r1, r1, #2
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccIiTvHp.s 			page 1
  128              		.loc 1 219 31 is_stmt 0 view .LVU33
  129 0060 0993     		str	r3, [sp, #36]
  220:Core/Src/tim.c **** 
-ARM GAS  /tmp/ccIiTvHp.s 			page 8
+ARM GAS  /tmp/ccfcDr9r.s 			page 8
 
 
  130              		.loc 1 220 5 is_stmt 1 view .LVU34
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccIiTvHp.s 			page 1
  173 009a 0493     		str	r3, [sp, #16]
  243:Core/Src/tim.c ****   /* USER CODE BEGIN TIM12_MspInit 1 */
  174              		.loc 1 243 5 view .LVU46
-ARM GAS  /tmp/ccIiTvHp.s 			page 9
+ARM GAS  /tmp/ccfcDr9r.s 			page 9
 
 
  175 009c 049B     		ldr	r3, [sp, #16]
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccIiTvHp.s 			page 1
  225              		.loc 1 253 15 is_stmt 0 view .LVU54
  226 0010 0368     		ldr	r3, [r0]
  227              		.loc 1 253 5 view .LVU55
-ARM GAS  /tmp/ccIiTvHp.s 			page 10
+ARM GAS  /tmp/ccfcDr9r.s 			page 10
 
 
  228 0012 404A     		ldr	r2, .L19
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccIiTvHp.s 			page 1
  300:Core/Src/tim.c ****     PB7     ------> TIM4_CH2
  301:Core/Src/tim.c ****     PB8     ------> TIM4_CH3
  302:Core/Src/tim.c ****     PB9     ------> TIM4_CH4
-ARM GAS  /tmp/ccIiTvHp.s 			page 11
+ARM GAS  /tmp/ccfcDr9r.s 			page 11
 
 
  303:Core/Src/tim.c ****     */
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccIiTvHp.s 			page 1
  258:Core/Src/tim.c ****     __HAL_RCC_GPIOB_CLK_ENABLE();
  254              		.loc 1 258 5 is_stmt 1 view .LVU61
  255              	.LBB6:
-ARM GAS  /tmp/ccIiTvHp.s 			page 12
+ARM GAS  /tmp/ccfcDr9r.s 			page 12
 
 
  258:Core/Src/tim.c ****     __HAL_RCC_GPIOB_CLK_ENABLE();
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccIiTvHp.s 			page 1
  260:Core/Src/tim.c ****     /**TIM3 GPIO Configuration
  296              		.loc 1 260 5 view .LVU76
  297 005e 1B6B     		ldr	r3, [r3, #48]
-ARM GAS  /tmp/ccIiTvHp.s 			page 13
+ARM GAS  /tmp/ccfcDr9r.s 			page 13
 
 
  298 0060 03F00403 		and	r3, r3, #4
@@ -778,7 +778,7 @@ ARM GAS  /tmp/ccIiTvHp.s 			page 1
  334 0082 0695     		str	r5, [sp, #24]
  275:Core/Src/tim.c ****     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
  335              		.loc 1 275 5 is_stmt 1 view .LVU95
-ARM GAS  /tmp/ccIiTvHp.s 			page 14
+ARM GAS  /tmp/ccfcDr9r.s 			page 14
 
 
  275:Core/Src/tim.c ****     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
@@ -838,7 +838,7 @@ ARM GAS  /tmp/ccIiTvHp.s 			page 1
  297:Core/Src/tim.c ****     /**TIM4 GPIO Configuration
  373              		.loc 1 297 5 view .LVU113
  374              	.LBB9:
-ARM GAS  /tmp/ccIiTvHp.s 			page 15
+ARM GAS  /tmp/ccfcDr9r.s 			page 15
 
 
  297:Core/Src/tim.c ****     /**TIM4 GPIO Configuration
@@ -898,7 +898,7 @@ ARM GAS  /tmp/ccIiTvHp.s 			page 1
  412              		.loc 1 309 5 is_stmt 0 view .LVU130
  413 00d6 FFF7FEFF 		bl	HAL_GPIO_Init
  414              	.LVL15:
-ARM GAS  /tmp/ccIiTvHp.s 			page 16
+ARM GAS  /tmp/ccfcDr9r.s 			page 16
 
 
  415 00da A3E7     		b	.L11
@@ -958,7 +958,7 @@ ARM GAS  /tmp/ccIiTvHp.s 			page 1
  453 0106 0993     		str	r3, [sp, #36]
  331:Core/Src/tim.c **** 
  454              		.loc 1 331 5 is_stmt 1 view .LVU147
-ARM GAS  /tmp/ccIiTvHp.s 			page 17
+ARM GAS  /tmp/ccfcDr9r.s 			page 17
 
 
  455 0108 05A9     		add	r1, sp, #20
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/ccIiTvHp.s 			page 1
  505              		.loc 1 35 27 is_stmt 0 view .LVU154
  506 000e 0C93     		str	r3, [sp, #48]
  507 0010 0D93     		str	r3, [sp, #52]
-ARM GAS  /tmp/ccIiTvHp.s 			page 18
+ARM GAS  /tmp/ccfcDr9r.s 			page 18
 
 
   36:Core/Src/tim.c ****   TIM_IC_InitTypeDef sConfigIC = {0};
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/ccIiTvHp.s 			page 1
   45:Core/Src/tim.c ****   {
  545              		.loc 1 45 7 is_stmt 0 view .LVU172
  546 003c FFF7FEFF 		bl	HAL_TIM_Base_Init
-ARM GAS  /tmp/ccIiTvHp.s 			page 19
+ARM GAS  /tmp/ccfcDr9r.s 			page 19
 
 
  547              	.LVL19:
@@ -1138,7 +1138,7 @@ ARM GAS  /tmp/ccIiTvHp.s 			page 1
  587 006c 0C93     		str	r3, [sp, #48]
   63:Core/Src/tim.c ****   if (HAL_TIMEx_MasterConfigSynchronization(&htim3, &sMasterConfig) != HAL_OK)
  588              		.loc 1 63 3 is_stmt 1 view .LVU187
-ARM GAS  /tmp/ccIiTvHp.s 			page 20
+ARM GAS  /tmp/ccfcDr9r.s 			page 20
 
 
   63:Core/Src/tim.c ****   if (HAL_TIMEx_MasterConfigSynchronization(&htim3, &sMasterConfig) != HAL_OK)
@@ -1198,7 +1198,7 @@ ARM GAS  /tmp/ccIiTvHp.s 			page 1
  626              		.loc 1 76 7 is_stmt 0 view .LVU204
  627 0094 0422     		movs	r2, #4
  628 0096 05A9     		add	r1, sp, #20
-ARM GAS  /tmp/ccIiTvHp.s 			page 21
+ARM GAS  /tmp/ccfcDr9r.s 			page 21
 
 
  629 0098 1B48     		ldr	r0, .L41
@@ -1258,7 +1258,7 @@ ARM GAS  /tmp/ccIiTvHp.s 			page 1
  668 00c4 E8B9     		cbnz	r0, .L40
  669              	.L30:
   92:Core/Src/tim.c **** 
-ARM GAS  /tmp/ccIiTvHp.s 			page 22
+ARM GAS  /tmp/ccfcDr9r.s 			page 22
 
 
  670              		.loc 1 92 3 is_stmt 1 view .LVU220
@@ -1318,7 +1318,7 @@ ARM GAS  /tmp/ccIiTvHp.s 			page 1
  716              	.LVL35:
  717 00fa D1E7     		b	.L28
  718              	.L39:
-ARM GAS  /tmp/ccIiTvHp.s 			page 23
+ARM GAS  /tmp/ccfcDr9r.s 			page 23
 
 
   82:Core/Src/tim.c ****   }
@@ -1378,7 +1378,7 @@ ARM GAS  /tmp/ccIiTvHp.s 			page 1
  768 0012 0B93     		str	r3, [sp, #44]
  769 0014 0C93     		str	r3, [sp, #48]
  770 0016 0D93     		str	r3, [sp, #52]
-ARM GAS  /tmp/ccIiTvHp.s 			page 24
+ARM GAS  /tmp/ccfcDr9r.s 			page 24
 
 
  100:Core/Src/tim.c ****   TIM_OC_InitTypeDef sConfigOC = {0};
@@ -1438,7 +1438,7 @@ ARM GAS  /tmp/ccIiTvHp.s 			page 1
  807 003e FFF7FEFF 		bl	HAL_TIM_Base_Init
  808              	.LVL38:
  109:Core/Src/tim.c ****   {
-ARM GAS  /tmp/ccIiTvHp.s 			page 25
+ARM GAS  /tmp/ccfcDr9r.s 			page 25
 
 
  809              		.loc 1 109 6 view .LVU254
@@ -1498,7 +1498,7 @@ ARM GAS  /tmp/ccIiTvHp.s 			page 1
  849              	.LVL41:
  124:Core/Src/tim.c ****   {
  850              		.loc 1 124 6 view .LVU269
-ARM GAS  /tmp/ccIiTvHp.s 			page 26
+ARM GAS  /tmp/ccfcDr9r.s 			page 26
 
 
  851 0072 0028     		cmp	r0, #0
@@ -1558,7 +1558,7 @@ ARM GAS  /tmp/ccIiTvHp.s 			page 1
  888 0096 FFF7FEFF 		bl	HAL_TIM_PWM_ConfigChannel
  889              	.LVL43:
  138:Core/Src/tim.c ****   {
-ARM GAS  /tmp/ccIiTvHp.s 			page 27
+ARM GAS  /tmp/ccfcDr9r.s 			page 27
 
 
  890              		.loc 1 138 6 view .LVU287
@@ -1618,7 +1618,7 @@ ARM GAS  /tmp/ccIiTvHp.s 			page 1
  933 00c8 5DF804FB 		ldr	pc, [sp], #4
  934              	.L54:
  935              	.LCFI15:
-ARM GAS  /tmp/ccIiTvHp.s 			page 28
+ARM GAS  /tmp/ccfcDr9r.s 			page 28
 
 
  936              		.cfi_restore_state
@@ -1678,7 +1678,7 @@ ARM GAS  /tmp/ccIiTvHp.s 			page 1
  981              	.L64:
  982 0102 00BF     		.align	2
  983              	.L63:
-ARM GAS  /tmp/ccIiTvHp.s 			page 29
+ARM GAS  /tmp/ccfcDr9r.s 			page 29
 
 
  984 0104 00000000 		.word	htim4
@@ -1738,7 +1738,7 @@ ARM GAS  /tmp/ccIiTvHp.s 			page 1
  1032              		.loc 1 164 3 is_stmt 1 view .LVU315
  164:Core/Src/tim.c ****   htim12.Init.CounterMode = TIM_COUNTERMODE_UP;
  1033              		.loc 1 164 25 is_stmt 0 view .LVU316
-ARM GAS  /tmp/ccIiTvHp.s 			page 30
+ARM GAS  /tmp/ccfcDr9r.s 			page 30
 
 
  1034 0024 4360     		str	r3, [r0, #4]
@@ -1798,7 +1798,7 @@ ARM GAS  /tmp/ccIiTvHp.s 			page 1
  1070 0046 0893     		str	r3, [sp, #32]
  179:Core/Src/tim.c ****   {
  1071              		.loc 1 179 3 is_stmt 1 view .LVU335
-ARM GAS  /tmp/ccIiTvHp.s 			page 31
+ARM GAS  /tmp/ccfcDr9r.s 			page 31
 
 
  179:Core/Src/tim.c ****   {
@@ -1858,7 +1858,7 @@ ARM GAS  /tmp/ccIiTvHp.s 			page 1
  1110              		.loc 1 191 6 view .LVU351
  1111 0072 88B9     		cbnz	r0, .L76
  1112              	.L70:
-ARM GAS  /tmp/ccIiTvHp.s 			page 32
+ARM GAS  /tmp/ccfcDr9r.s 			page 32
 
 
  195:Core/Src/tim.c **** 
@@ -1918,7 +1918,7 @@ ARM GAS  /tmp/ccIiTvHp.s 			page 1
  1161              		.global	HAL_TIM_Base_MspDeInit
  1162              		.syntax unified
  1163              		.thumb
-ARM GAS  /tmp/ccIiTvHp.s 			page 33
+ARM GAS  /tmp/ccfcDr9r.s 			page 33
 
 
  1164              		.thumb_func
@@ -1978,7 +1978,7 @@ ARM GAS  /tmp/ccIiTvHp.s 			page 1
  1190 000c 9342     		cmp	r3, r2
  1191 000e 16D0     		beq	.L85
  368:Core/Src/tim.c ****   {
-ARM GAS  /tmp/ccIiTvHp.s 			page 34
+ARM GAS  /tmp/ccfcDr9r.s 			page 34
 
 
  369:Core/Src/tim.c ****   /* USER CODE BEGIN TIM4_MspDeInit 0 */
@@ -2038,7 +2038,7 @@ ARM GAS  /tmp/ccIiTvHp.s 			page 1
  1220              		.loc 1 361 5 view .LVU373
  1221 0034 4021     		movs	r1, #64
  1222 0036 0E48     		ldr	r0, .L87+20
-ARM GAS  /tmp/ccIiTvHp.s 			page 35
+ARM GAS  /tmp/ccfcDr9r.s 			page 35
 
 
  1223 0038 FFF7FEFF 		bl	HAL_GPIO_DeInit
@@ -2091,32 +2091,32 @@ ARM GAS  /tmp/ccIiTvHp.s 			page 1
  1269              		.file 12 "Core/Inc/tim.h"
  1270              		.file 13 "Core/Inc/main.h"
  1271              		.file 14 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h"
-ARM GAS  /tmp/ccIiTvHp.s 			page 36
+ARM GAS  /tmp/ccfcDr9r.s 			page 36
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 tim.c
-     /tmp/ccIiTvHp.s:18     .text.HAL_TIM_Base_MspInit:0000000000000000 $t
-     /tmp/ccIiTvHp.s:26     .text.HAL_TIM_Base_MspInit:0000000000000000 HAL_TIM_Base_MspInit
-     /tmp/ccIiTvHp.s:183    .text.HAL_TIM_Base_MspInit:00000000000000a0 $d
-     /tmp/ccIiTvHp.s:192    .text.HAL_TIM_MspPostInit:0000000000000000 $t
-     /tmp/ccIiTvHp.s:199    .text.HAL_TIM_MspPostInit:0000000000000000 HAL_TIM_MspPostInit
-     /tmp/ccIiTvHp.s:466    .text.HAL_TIM_MspPostInit:0000000000000114 $d
-     /tmp/ccIiTvHp.s:477    .text.MX_TIM3_Init:0000000000000000 $t
-     /tmp/ccIiTvHp.s:484    .text.MX_TIM3_Init:0000000000000000 MX_TIM3_Init
-     /tmp/ccIiTvHp.s:731    .text.MX_TIM3_Init:0000000000000108 $d
+     /tmp/ccfcDr9r.s:18     .text.HAL_TIM_Base_MspInit:0000000000000000 $t
+     /tmp/ccfcDr9r.s:26     .text.HAL_TIM_Base_MspInit:0000000000000000 HAL_TIM_Base_MspInit
+     /tmp/ccfcDr9r.s:183    .text.HAL_TIM_Base_MspInit:00000000000000a0 $d
+     /tmp/ccfcDr9r.s:192    .text.HAL_TIM_MspPostInit:0000000000000000 $t
+     /tmp/ccfcDr9r.s:199    .text.HAL_TIM_MspPostInit:0000000000000000 HAL_TIM_MspPostInit
+     /tmp/ccfcDr9r.s:466    .text.HAL_TIM_MspPostInit:0000000000000114 $d
+     /tmp/ccfcDr9r.s:477    .text.MX_TIM3_Init:0000000000000000 $t
+     /tmp/ccfcDr9r.s:484    .text.MX_TIM3_Init:0000000000000000 MX_TIM3_Init
+     /tmp/ccfcDr9r.s:731    .text.MX_TIM3_Init:0000000000000108 $d
                             *COM*:0000000000000040 htim3
-     /tmp/ccIiTvHp.s:737    .text.MX_TIM4_Init:0000000000000000 $t
-     /tmp/ccIiTvHp.s:744    .text.MX_TIM4_Init:0000000000000000 MX_TIM4_Init
-     /tmp/ccIiTvHp.s:984    .text.MX_TIM4_Init:0000000000000104 $d
+     /tmp/ccfcDr9r.s:737    .text.MX_TIM4_Init:0000000000000000 $t
+     /tmp/ccfcDr9r.s:744    .text.MX_TIM4_Init:0000000000000000 MX_TIM4_Init
+     /tmp/ccfcDr9r.s:984    .text.MX_TIM4_Init:0000000000000104 $d
                             *COM*:0000000000000040 htim4
-     /tmp/ccIiTvHp.s:990    .text.MX_TIM12_Init:0000000000000000 $t
-     /tmp/ccIiTvHp.s:997    .text.MX_TIM12_Init:0000000000000000 MX_TIM12_Init
-     /tmp/ccIiTvHp.s:1154   .text.MX_TIM12_Init:00000000000000a0 $d
+     /tmp/ccfcDr9r.s:990    .text.MX_TIM12_Init:0000000000000000 $t
+     /tmp/ccfcDr9r.s:997    .text.MX_TIM12_Init:0000000000000000 MX_TIM12_Init
+     /tmp/ccfcDr9r.s:1154   .text.MX_TIM12_Init:00000000000000a0 $d
                             *COM*:0000000000000040 htim12
-     /tmp/ccIiTvHp.s:1160   .text.HAL_TIM_Base_MspDeInit:0000000000000000 $t
-     /tmp/ccIiTvHp.s:1167   .text.HAL_TIM_Base_MspDeInit:0000000000000000 HAL_TIM_Base_MspDeInit
-     /tmp/ccIiTvHp.s:1245   .text.HAL_TIM_Base_MspDeInit:000000000000005c $d
+     /tmp/ccfcDr9r.s:1160   .text.HAL_TIM_Base_MspDeInit:0000000000000000 $t
+     /tmp/ccfcDr9r.s:1167   .text.HAL_TIM_Base_MspDeInit:0000000000000000 HAL_TIM_Base_MspDeInit
+     /tmp/ccfcDr9r.s:1245   .text.HAL_TIM_Base_MspDeInit:000000000000005c $d
 
 UNDEFINED SYMBOLS
 HAL_GPIO_Init

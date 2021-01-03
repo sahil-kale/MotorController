@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccUpoBec.s 			page 1
+ARM GAS  /tmp/ccIxxzUe.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -39,10 +39,10 @@ ARM GAS  /tmp/ccUpoBec.s 			page 1
    9:Core/Src/can.c ****   * <h2><center>&copy; Copyright (c) 2021 STMicroelectronics.
   10:Core/Src/can.c ****   * All rights reserved.</center></h2>
   11:Core/Src/can.c ****   *
-  12:Core/Src/can.c ****   * This software component is licensed by ST under BSD 3-Clause license,
-  13:Core/Src/can.c ****   * the "License"; You may not use this file except in compliance with the
-  14:Core/Src/can.c ****   * License. You may obtain a copy of the License at:
-  15:Core/Src/can.c ****   *                        opensource.org/licenses/BSD-3-Clause
+  12:Core/Src/can.c ****   * This software component is licensed by ST under Ultimate Liberty license
+  13:Core/Src/can.c ****   * SLA0044, the "License"; You may not use this file except in compliance with
+  14:Core/Src/can.c ****   * the License. You may obtain a copy of the License at:
+  15:Core/Src/can.c ****   *                             www.st.com/SLA0044
   16:Core/Src/can.c ****   *
   17:Core/Src/can.c ****   ******************************************************************************
   18:Core/Src/can.c ****   */
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccUpoBec.s 			page 1
   28:Core/Src/can.c **** 
   29:Core/Src/can.c **** /* CAN2 init function */
   30:Core/Src/can.c **** void MX_CAN2_Init(void)
-ARM GAS  /tmp/ccUpoBec.s 			page 2
+ARM GAS  /tmp/ccIxxzUe.s 			page 2
 
 
   31:Core/Src/can.c **** {
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccUpoBec.s 			page 1
   71 001c C376     		strb	r3, [r0, #27]
   43:Core/Src/can.c ****   hcan2.Init.ReceiveFifoLocked = DISABLE;
   72              		.loc 1 43 3 is_stmt 1 view .LVU21
-ARM GAS  /tmp/ccUpoBec.s 			page 3
+ARM GAS  /tmp/ccIxxzUe.s 			page 3
 
 
   73              		.loc 1 43 32 is_stmt 0 view .LVU22
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccUpoBec.s 			page 1
  118              	.LCFI1:
  119              		.cfi_def_cfa_offset 4
  120              		.cfi_offset 14, -4
-ARM GAS  /tmp/ccUpoBec.s 			page 4
+ARM GAS  /tmp/ccIxxzUe.s 			page 4
 
 
  121 0002 89B0     		sub	sp, sp, #36
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccUpoBec.s 			page 1
  147 001a 5DF804FB 		ldr	pc, [sp], #4
  148              	.LVL4:
  149              	.L10:
-ARM GAS  /tmp/ccUpoBec.s 			page 5
+ARM GAS  /tmp/ccIxxzUe.s 			page 5
 
 
  150              	.LCFI4:
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccUpoBec.s 			page 1
   65:Core/Src/can.c ****     /**CAN2 GPIO Configuration
  190              		.loc 1 65 5 view .LVU53
  191 004e 196B     		ldr	r1, [r3, #48]
-ARM GAS  /tmp/ccUpoBec.s 			page 6
+ARM GAS  /tmp/ccIxxzUe.s 			page 6
 
 
  192 0050 41F00201 		orr	r1, r1, #2
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccUpoBec.s 			page 1
  231 007e 00BF     		.align	2
  232              	.L11:
  233 0080 00680040 		.word	1073768448
-ARM GAS  /tmp/ccUpoBec.s 			page 7
+ARM GAS  /tmp/ccIxxzUe.s 			page 7
 
 
  234 0084 00040240 		.word	1073873920
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccUpoBec.s 			page 1
  104:Core/Src/can.c ****   }
  105:Core/Src/can.c **** }
  268              		.loc 1 105 1 view .LVU75
-ARM GAS  /tmp/ccUpoBec.s 			page 8
+ARM GAS  /tmp/ccIxxzUe.s 			page 8
 
 
  269 000a 08BD     		pop	{r3, pc}
@@ -468,21 +468,21 @@ ARM GAS  /tmp/ccUpoBec.s 			page 1
  310              		.file 11 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h"
  311              		.file 12 "Core/Inc/can.h"
  312              		.file 13 "Core/Inc/main.h"
-ARM GAS  /tmp/ccUpoBec.s 			page 9
+ARM GAS  /tmp/ccIxxzUe.s 			page 9
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 can.c
-     /tmp/ccUpoBec.s:18     .text.MX_CAN2_Init:0000000000000000 $t
-     /tmp/ccUpoBec.s:26     .text.MX_CAN2_Init:0000000000000000 MX_CAN2_Init
-     /tmp/ccUpoBec.s:96     .text.MX_CAN2_Init:0000000000000030 $d
+     /tmp/ccIxxzUe.s:18     .text.MX_CAN2_Init:0000000000000000 $t
+     /tmp/ccIxxzUe.s:26     .text.MX_CAN2_Init:0000000000000000 MX_CAN2_Init
+     /tmp/ccIxxzUe.s:96     .text.MX_CAN2_Init:0000000000000030 $d
                             *COM*:0000000000000028 hcan2
-     /tmp/ccUpoBec.s:102    .text.HAL_CAN_MspInit:0000000000000000 $t
-     /tmp/ccUpoBec.s:109    .text.HAL_CAN_MspInit:0000000000000000 HAL_CAN_MspInit
-     /tmp/ccUpoBec.s:233    .text.HAL_CAN_MspInit:0000000000000080 $d
-     /tmp/ccUpoBec.s:239    .text.HAL_CAN_MspDeInit:0000000000000000 $t
-     /tmp/ccUpoBec.s:246    .text.HAL_CAN_MspDeInit:0000000000000000 HAL_CAN_MspDeInit
-     /tmp/ccUpoBec.s:293    .text.HAL_CAN_MspDeInit:000000000000002c $d
+     /tmp/ccIxxzUe.s:102    .text.HAL_CAN_MspInit:0000000000000000 $t
+     /tmp/ccIxxzUe.s:109    .text.HAL_CAN_MspInit:0000000000000000 HAL_CAN_MspInit
+     /tmp/ccIxxzUe.s:233    .text.HAL_CAN_MspInit:0000000000000080 $d
+     /tmp/ccIxxzUe.s:239    .text.HAL_CAN_MspDeInit:0000000000000000 $t
+     /tmp/ccIxxzUe.s:246    .text.HAL_CAN_MspDeInit:0000000000000000 HAL_CAN_MspDeInit
+     /tmp/ccIxxzUe.s:293    .text.HAL_CAN_MspDeInit:000000000000002c $d
 
 UNDEFINED SYMBOLS
 HAL_CAN_Init
