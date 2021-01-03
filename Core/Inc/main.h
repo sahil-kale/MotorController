@@ -58,6 +58,34 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define ENC_1_Pin GPIO_PIN_0
+#define ENC_1_GPIO_Port GPIOC
+#define ENC_2_Pin GPIO_PIN_1
+#define ENC_2_GPIO_Port GPIOC
+#define LED_BLUE_Pin GPIO_PIN_7
+#define LED_BLUE_GPIO_Port GPIOA
+#define LED_GREEN_Pin GPIO_PIN_0
+#define LED_GREEN_GPIO_Port GPIOB
+#define PWM_IN_Pin GPIO_PIN_1
+#define PWM_IN_GPIO_Port GPIOB
+#define MOTOR_H5_Pin GPIO_PIN_14
+#define MOTOR_H5_GPIO_Port GPIOB
+#define MOTOR_H6_Pin GPIO_PIN_15
+#define MOTOR_H6_GPIO_Port GPIOB
+#define LED_RED_Pin GPIO_PIN_6
+#define LED_RED_GPIO_Port GPIOC
+#define MODE_BTN_Pin GPIO_PIN_9
+#define MODE_BTN_GPIO_Port GPIOC
+#define BackEMF_Pin GPIO_PIN_4
+#define BackEMF_GPIO_Port GPIOB
+#define MOTOR_H1_Pin GPIO_PIN_6
+#define MOTOR_H1_GPIO_Port GPIOB
+#define MOTOR_H2_Pin GPIO_PIN_7
+#define MOTOR_H2_GPIO_Port GPIOB
+#define MOTOR_H3_Pin GPIO_PIN_8
+#define MOTOR_H3_GPIO_Port GPIOB
+#define MOTOR_H4_Pin GPIO_PIN_9
+#define MOTOR_H4_GPIO_Port GPIOB
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */
