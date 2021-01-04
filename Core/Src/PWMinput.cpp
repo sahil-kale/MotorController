@@ -3,11 +3,6 @@
 #include <stdbool.h>
 #include "PWMinput.hpp"
 
-
-//Prescalar Math: (8MHz/2MHz) - 1 = 3 <- PRESCALAR
-//65535/2000000 = 0.0327675s | 0.02/0.0327675 = 40000 ARR countup 
-
-
 static volatile int IC_Val1 = 0;
 static volatile int IC_Val2 = 0;
 //static volatile int Frequency = 0;
@@ -16,28 +11,28 @@ static volatile bool isRisingCaptured = false;
 
 void HAL_TIM_OC_DelayElapsedCallback(TIM_HandleTypeDef *htim)
 {
-    if(htim->Channel == HAL_TIM_ACTIVE_CHANNEL_1) //rising edge IN
+    if(htim->Channel == HAL_TIM_ACTIVE_CHANNEL_1) //tim3 ch1 is being used for input capture
     {
 
-        if(!isRisingCaptured)
+        if(!isRisingCaptured) // If the rising edge is not captured, reset the TIM counter and change the polarity
         {
             __HAL_TIM_SET_COUNTER(htim, 0);
             //IC_Val1 = HAL_TIM_ReadCapturedValue(htim, TIM_CHANNEL_1);
             isRisingCaptured = true;
-            __HAL_TIM_SET_CAPTUREPOLARITY(htim, TIM_CHANNEL_1, TIM_INPUTCHANNELPOLARITY_FALLING);
+            __HAL_TIM_SET_CAPTUREPOLARITY(htim, TIM_CHANNEL_1, TIM_INPUTCHANNELPOLARITY_FALLING);  //Capture falling edge now
         }
-        else
+        else //If the falling edge is now about to be captured, read the counter
         {
             IC_Val2 = HAL_TIM_ReadCapturedValue(htim, TIM_CHANNEL_1);
             //__HAL_TIM_SET_COUNTER(htim, 0);
 
             if(IC_Val2 > IC_Val1)
             {
-                DutyCycle = IC_Val2-IC_Val1;
+                DutyCycle = IC_Val2-IC_Val1; //Calculate Duty Cycle: Currently the TIM2 clock is at 1MHz, which is a period of 1us
             }
 
             isRisingCaptured = false;
-            __HAL_TIM_SET_CAPTUREPOLARITY(htim, TIM_CHANNEL_1, TIM_INPUTCHANNELPOLARITY_RISING);
+            __HAL_TIM_SET_CAPTUREPOLARITY(htim, TIM_CHANNEL_1, TIM_INPUTCHANNELPOLARITY_RISING); //Capture rising edge now
 
         }
         
@@ -60,7 +55,7 @@ void HAL_TIM_OC_DelayElapsedCallback(TIM_HandleTypeDef *htim)
 }
 
 
-void startPWMInput()
+void startPWMInput() //Starts the interrupt
 {
     HAL_TIM_IC_Start_IT(&htim2, TIM_CHANNEL_2);
 }
@@ -68,4 +63,9 @@ void startPWMInput()
 int getDutyCycleUs()
 {
     return DutyCycle; //The prescalar is set so that each tick is 1us. Returning the duty cycle will therefore return pulse width
+}
+
+void stopPWMOutput() //Stops the interrupt. Should be called by a transition state
+{
+	HAL_TIM_IC_Stop_IT(&htim2, TIM_CHANNEL_2);
 }
