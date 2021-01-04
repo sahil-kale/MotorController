@@ -1,6 +1,7 @@
 #include "tim.h"
 #include "main.h"
 #include <stdbool.h>
+#include "PWMinput.hpp"
 
 
 //Prescalar Math: (8MHz/2MHz) - 1 = 3 <- PRESCALAR
@@ -20,14 +21,15 @@ void HAL_TIM_OC_DelayElapsedCallback(TIM_HandleTypeDef *htim)
 
         if(!isRisingCaptured)
         {
-            IC_Val1 = HAL_TIM_ReadCapturedValue(htim, TIM_CHANNEL_1);
+            __HAL_TIM_SET_COUNTER(htim, 0);
+            //IC_Val1 = HAL_TIM_ReadCapturedValue(htim, TIM_CHANNEL_1);
             isRisingCaptured = true;
-            __HAL_TIM_SET_CAPTUREPOLARITY(htim, TIM_CHANNEL_2, TIM_INPUTCHANNELPOLARITY_FALLING);
+            __HAL_TIM_SET_CAPTUREPOLARITY(htim, TIM_CHANNEL_1, TIM_INPUTCHANNELPOLARITY_FALLING);
         }
         else
         {
-            IC_Val2 = HAL_TIM_ReadCapturedValue(htim, TIM_CHANNEL_2);
-            __HAL_TIM_SET_COUNTER(htim, 0);
+            IC_Val2 = HAL_TIM_ReadCapturedValue(htim, TIM_CHANNEL_1);
+            //__HAL_TIM_SET_COUNTER(htim, 0);
 
             if(IC_Val2 > IC_Val1)
             {
@@ -35,7 +37,7 @@ void HAL_TIM_OC_DelayElapsedCallback(TIM_HandleTypeDef *htim)
             }
 
             isRisingCaptured = false;
-            __HAL_TIM_SET_CAPTUREPOLARITY(htim, TIM_CHANNEL_2, TIM_INPUTCHANNELPOLARITY_RISING);
+            __HAL_TIM_SET_CAPTUREPOLARITY(htim, TIM_CHANNEL_1, TIM_INPUTCHANNELPOLARITY_RISING);
 
         }
         
@@ -61,4 +63,9 @@ void HAL_TIM_OC_DelayElapsedCallback(TIM_HandleTypeDef *htim)
 void startPWMInput()
 {
     HAL_TIM_IC_Start_IT(&htim2, TIM_CHANNEL_2);
+}
+
+int getDutyCycleUs()
+{
+    return DutyCycle; //The prescalar is set so that each tick is 1us. Returning the duty cycle will therefore return pulse width
 }

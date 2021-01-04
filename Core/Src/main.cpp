@@ -24,7 +24,7 @@
 #include "tim.h"
 #include "usart.h"
 #include "gpio.h"
-#include "PWMinput.cpp"
+#include "PWMinput.hpp"
 //#include <cstdlib>
 
 /* Private includes ----------------------------------------------------------*/
