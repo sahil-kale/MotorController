@@ -69,8 +69,8 @@ all: main-build
 main-build: controller_STM32FW.elf secondary-outputs
 
 # Tool invocations
-controller_STM32FW.elf: $(OBJS) $(USER_OBJS) fail-specified-linker-script-missing
-	arm-none-eabi-g++ -o "controller_STM32FW.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -Wl,-Map="controller_STM32FW.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+controller_STM32FW.elf: $(OBJS) $(USER_OBJS) C:\Users\sahil\OneDrive\Documents\GitHub\MotorController\STM32F446RETX_FLASH.ld
+	arm-none-eabi-g++ -o "controller_STM32FW.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\sahil\OneDrive\Documents\GitHub\MotorController\STM32F446RETX_FLASH.ld" -Wl,-Map="controller_STM32FW.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
