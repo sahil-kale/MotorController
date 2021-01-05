@@ -6,4 +6,6 @@ int getDutyCycleUs();
 void startPWMinput();
 void stopPWMOutput();
 
+bool isOvertime();
+
 #endif

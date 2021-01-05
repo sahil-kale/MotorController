@@ -3,11 +3,15 @@
 #include <stdbool.h>
 #include "PWMinput.hpp"
 
+static const int PWM_MAX_DELAY_MS = 40;
+
 static volatile int IC_Val1 = 0;
 static volatile int IC_Val2 = 0;
 //static volatile int Frequency = 0;
 static volatile int DutyCycle = 0;
 static volatile bool isRisingCaptured = false;
+static volatile uint32_t timeOfInterruptms = 0;
+
 
 void HAL_TIM_OC_DelayElapsedCallback(TIM_HandleTypeDef *htim)
 {
@@ -16,6 +20,7 @@ void HAL_TIM_OC_DelayElapsedCallback(TIM_HandleTypeDef *htim)
 
         if(!isRisingCaptured) // If the rising edge is not captured, reset the TIM counter and change the polarity
         {
+        	timeOfInterruptms = HAL_GetTick(); //This stores the time at which the interrupt was called. This is used later in isOvertime()
             __HAL_TIM_SET_COUNTER(htim, 0);
             //IC_Val1 = HAL_TIM_ReadCapturedValue(htim, TIM_CHANNEL_1);
             isRisingCaptured = true;
@@ -36,6 +41,7 @@ void HAL_TIM_OC_DelayElapsedCallback(TIM_HandleTypeDef *htim)
 
         }
         
+
 
         /*
         IC_Val1 = HAL_TIM_ReadCapturedValue(htim, TIM_CHANNEL_1);
@@ -68,4 +74,9 @@ int getDutyCycleUs()
 void stopPWMOutput() //Stops the interrupt. Should be called by a transition state
 {
 	HAL_TIM_IC_Stop_IT(&htim2, TIM_CHANNEL_2);
+}
+
+bool isOvertime() //This method will ensure that signals are above a certain frequency to operate (see datasheet for specs)
+{
+	return (HAL_GetTick() - timeOfInterruptms) > PWM_MAX_DELAY_MS;
 }
