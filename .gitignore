@@ -99,3 +99,5 @@ Makefile
 Debug/
 
 Release/
+.settings/stm32cubeide.project.prefs
+*.prefs
