@@ -28,9 +28,10 @@ LED::LED()
 
 void LED::setColour(char red, char green, char blue) //Chars are used to save memory since they're only 4 bytes
 {
-	uint8_t redValue = int(red);
-	uint8_t greenValue = int(green);
-	uint8_t blueValue = int(blue);
+
+	double redValue = int(red)/double(MAX_COLOUR_VALUE);
+	double greenValue = int(green)/double(MAX_COLOUR_VALUE);
+	double blueValue = int(blue)/double(MAX_COLOUR_VALUE);
 
 	PWMPinOut redChannel = LED_Pinout[RED_CHANNEL_IN_STRUCT];
 	PWMPinOut greenChannel = LED_Pinout[GREEN_CHANNEL_IN_STRUCT];
