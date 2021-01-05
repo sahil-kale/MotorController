@@ -1,8 +1,4 @@
-//
-// Created by aadi on 2020-12-19.
-//
-
-#include "PIDFControl.h"
+#include "PIDFControl.hpp"
 #include <cmath>
 #include <limits>
 
@@ -65,3 +61,4 @@ double PIDFControl::calculate(double target, double input, uint32_t time) {
 
     return out;
 }
+
