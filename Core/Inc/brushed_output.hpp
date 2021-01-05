@@ -1,3 +1,6 @@
+#ifndef BRUSHED_OUTPUT_HPP
+#define BRUSHED_OUTPUT_HPP
+
 class BrushedMotorDriver //Singleton behaviour used to prevent 2 files from using the set functions
 {
 	public:
@@ -10,4 +13,9 @@ class BrushedMotorDriver //Singleton behaviour used to prevent 2 files from usin
 	private:
 		BrushedMotorDriver(); //Private constructor
 		static BrushedMotorDriver* s_instance;
+		void setForwardPWMPeripherals(double dutyPercent);
+		void setBackwardPWMPeripherals(double dutyPercent);
+
 };
+
+#endif
