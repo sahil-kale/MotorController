@@ -27,9 +27,6 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#ifdef __cplusplus
-extern "C" {
-#endif
 
 /* USER CODE END Includes */
 
@@ -62,9 +59,6 @@ void MX_FREERTOS_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-#ifdef __cplusplus
-}
-#endif
 
 /* USER CODE END 0 */
 
