@@ -8,6 +8,7 @@
 *.elf
 *.mk
 *.list
+build/*
 
 # Linker output
 *.ilk
@@ -93,3 +94,8 @@ scripts/__pycache__/
 *.bak
 *.dwl
 *.dwl2
+Makefile
+
+Debug/
+
+Release/
