@@ -26,7 +26,7 @@ LED::LED()
 		}
 }
 
-void LED::setColour(char red, char green, char blue) //Chars are used to save memory since they're only 4 bytes
+void LED::setColour(char red, char green, char blue) //Chars are used to save memory since they're only 4 bits
 {
 
 	double redValue = int(red)/double(MAX_COLOUR_VALUE);
