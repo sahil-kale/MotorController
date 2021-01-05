@@ -94,3 +94,4 @@ scripts/__pycache__/
 *.bak
 *.dwl
 *.dwl2
+.settings/stm32cubeide.project.prefs
