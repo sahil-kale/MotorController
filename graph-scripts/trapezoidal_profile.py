@@ -9,8 +9,12 @@ def motion_profile(vel, accel, distance, increment):
     vels = []
     times = []
     x = 0.0
+    
+    if distance < 0:
+        accel = -accel
+        vel = -vel
 
-    if ta*vel > distance:
+    if abs(ta*vel) > abs(distance):
        #calculating a new ta
        ta = math.sqrt(distance/accel)
 
@@ -51,7 +55,7 @@ import matplotlib
 import matplotlib.pyplot as plt 
 import numpy as np
 
-dist = 2
+dist = -2
 vel = 3
 accel = 1
 inc = 0.001 #this is like resolution
