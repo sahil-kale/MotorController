@@ -20,7 +20,7 @@ uint8_t rxData;
 
 UART_CAN_Manager::UART_CAN_Manager()
 {
-
+	CANConfig();
 }
 
 UART_CAN_Manager* UART_CAN_Manager::s_instance = nullptr;
