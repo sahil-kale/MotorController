@@ -1,5 +1,5 @@
 # Hornet Hybrid Brushed/Brushless Motor Controller
-![Logo Photo](logo.png)
+![Logo Photo](Misc/logo.png)
 
 ## 1.1 General Summary
 
