@@ -54,6 +54,8 @@ void BusFault_Handler(void);
 void UsageFault_Handler(void);
 void DebugMon_Handler(void);
 void SysTick_Handler(void);
+void EXTI0_IRQHandler(void);
+void EXTI1_IRQHandler(void);
 void TIM2_IRQHandler(void);
 /* USER CODE BEGIN EFP */
 

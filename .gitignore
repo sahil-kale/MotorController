@@ -101,3 +101,7 @@ Debug/
 Release/
 .settings/stm32cubeide.project.prefs
 *.prefs
+
+STM32F446RETx_FLASH.ld
+
+startup_stm32f446xx.s
