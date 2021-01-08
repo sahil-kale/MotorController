@@ -1,2 +1,3 @@
 # MotorController
- DC motor controller
+Hornet Hybrid Brushed/Brushless Motor Controller
+![Logo Photo](logo.png)
