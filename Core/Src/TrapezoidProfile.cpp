@@ -5,7 +5,8 @@
 
 std::vector<std::pair<double, double>> TriangleProfile::generate(double distance) {
 
-	//assume trapezoid 
+	//calculating the amount of time for each segment
+	//assuming the given distance needs a trapezoid 
 	double tb = distance / this->velocity - 1/this->accel;
 	double ta = vel/accel;
 	
@@ -17,12 +18,14 @@ std::vector<std::pair<double, double>> TriangleProfile::generate(double distance
 	double accel = this->accel;
 	double vel = this->velocity;	
 
-	
+	//modify the accel and vel if the distance is negative	
 	if(distance < 0.0) {
 		accel = -this->accel;
 		vel = -this->velocity;
 	}
-
+	
+	//check if a trapezoid works for this distance
+	//or if a triangle is needed
 	if(std::abs(ta * vel) > abs(distance)) {
 
 		//calculate a new ta
