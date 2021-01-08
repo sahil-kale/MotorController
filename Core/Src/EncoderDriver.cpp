@@ -1,5 +1,7 @@
 import "EncoderDriver.hpp"
 
+
+//encoder driver constructor
 EncoderDriver::EncoderDriver() {
 	velocity = 0;
 	position = 0;
@@ -8,6 +10,7 @@ EncoderDriver::EncoderDriver() {
 
 EncoderDriver* EncoderDriver::instance = nullptr;
 
+//gets the single instance, creates one if it doesnt exist 
 EncoderDriver* EncoderDriver::getInstance() {
 	if(!instance) {
 		instance = new EncoderDriver();
@@ -16,6 +19,7 @@ EncoderDriver* EncoderDriver::getInstance() {
 	return instance;
 }
 
+//getters and setters
 int32_t EncoderDriver::getPosition() {
 	return position;
 }
@@ -28,6 +32,8 @@ double EncoderDriver::getVelocity() {
 	return velocity;
 }
 
+
+//two functions to be called by the gpio interrupt
 void EncoderDriver::intChannelA(bool rising) {
 	//get the value of each channel
 	bool chanA = rising;
@@ -39,6 +45,7 @@ void EncoderDriver::intChannelA(bool rising) {
 	uint32_t time = HAL_GetTick();	
 	//get the time since the last interrrupt
 	uint32_t dt  = time - lastInterruptTime;	
+	
 
 	//modify position and velocity
 	if(forward) {
@@ -73,6 +80,7 @@ void EncoderDriver::intChannelB(bool rising) {
 	lastInterruptTime = time; 
 }
 
+//callback to be called on gpio interrupt
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin) {
 	
 	if (GPIO_Pin == 0) { //enc 1 pin - channel a
