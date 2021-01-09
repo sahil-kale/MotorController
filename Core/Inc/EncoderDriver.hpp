@@ -28,7 +28,7 @@ class EncoderDriver {
 			double velocity;
 
 			uint32_t lastInterruptTime; //used to find the time between interrupts
-}
+};
 
 #endif // ENCODER_DRIVER_HPP
 
