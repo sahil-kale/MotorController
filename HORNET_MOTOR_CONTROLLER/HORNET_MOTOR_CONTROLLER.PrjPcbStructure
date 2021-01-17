@@ -1,1 +1,4 @@
-Record=TopLevelDocument|FileName=SH1 - STM32.SchDoc
+Record=TopLevelDocument|FileName=SH1 - STM32.SchDoc|SheetNumber= 
+Record=NoMainPathDocument|SourceDocument=SH1 - STM32.SchDoc|FileName=SH2 - HBridge.SchDoc|SheetNumber= 
+Record=NoMainPathDocument|SourceDocument=SH1 - STM32.SchDoc|FileName=SH3 - Debug Communication.SchDoc|SheetNumber= 
+Record=NoMainPathDocument|SourceDocument=SH1 - STM32.SchDoc|FileName=SH4 - PWM + CAN.SchDoc|SheetNumber= 
